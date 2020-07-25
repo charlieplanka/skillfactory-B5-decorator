@@ -30,17 +30,17 @@ class Stopwatch:
 
 # USAGE EXAMPLES
 # using as a context manager
-def test_manager():
-    time.sleep(2)
+# def test_manager():
+#     time.sleep(2)
 
 
-with Stopwatch() as timer:
-    test_manager()
+# with Stopwatch() as timer:
+#     test_manager()
 
 # using as a decorator
-@Stopwatch(3)
-def test_decorator():
-    time.sleep(2)
+# @Stopwatch(3)
+# def test_decorator():
+#     time.sleep(2)
 
 
-test_decorator()
+# test_decorator()
