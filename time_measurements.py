@@ -3,8 +3,11 @@ import time
 
 class Stopwatch:
     """
-    Measures the execution time of a function.
+    Measures the execution time of a function. 
     Can be used as a decorator (see __call__ method) or as a context manager.
+    
+    Decorator measures average time for multiple function runs. 
+    Quantity of runs can be set while creating an object.
     """
     def __init__(self, runs=10):
         self.runs = runs
@@ -28,7 +31,7 @@ class Stopwatch:
 
     def __exit__(self, *args, **kwargs):
         end = time.time()
-        total_time = (end - self.start)
+        total_time = end - self.start
         print("Время выполнения: %.5f секунд." % total_time)
 
 
