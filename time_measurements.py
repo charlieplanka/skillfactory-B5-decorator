@@ -2,6 +2,10 @@ import time
 
 
 class Stopwatch:
+    """
+    Measures the execution time of a function.
+    Can be used as a decorator (see __call__ method) or as a context manager.
+    """
     def __init__(self, runs=10):
         self.runs = runs
 
